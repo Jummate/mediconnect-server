@@ -9,7 +9,8 @@ from routes.doctor_route import doctor_bp
 
 # instantiate the database
 app = Flask(__name__)
-CORS(app, resources={r"/*":{"origins":["http://127.0.0.1:5173", "http://localhost:5173"]}})
+# CORS(app, resources={r"/*":{"origins":["http://127.0.0.1:5173", "http://localhost:5173"]}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # load the configuration from the config file
 # app.config.from_object("config")
